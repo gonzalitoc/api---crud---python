@@ -1,0 +1,31 @@
+DROP DATABASE IF EXISTS venta;
+CREATE DATABASE venta;
+USE venta;
+
+
+CREATE TABLE producto (
+    id_producto INT PRIMARY KEY auto_increment,
+    nombre VARCHAR(50),
+    descripcion VARCHAR(255)
+);
+
+CREATE TABLE login (
+	id INT PRIMARY KEY auto_increment,
+    usuario varchar(200),
+    passw varchar(200)
+);
+
+INSERT INTO login(usuario,passw) VALUES
+('leito','gonzales');
+
+INSERT INTO producto (id_producto, nombre, descripcion) VALUES
+(1, 'Alarma', 'Dispositivo de seguridad para alertar en caso de intrusión.'),
+(2, 'Cámara', 'Dispositivo de videovigilancia para monitoreo de áreas.'),
+(3, 'Sensor de movimiento', 'Dispositivo que detecta movimiento en un área específica.'),
+(4, 'Cerradura digital', 'Cerradura que utiliza códigos o tarjetas en lugar de llaves.'),
+(5, 'Detector de humo', 'Dispositivo que detecta la presencia de humo como indicador de incendio.'),
+(6, 'Kit de videovigilancia', 'Conjunto completo de cámaras y grabadoras para videovigilancia.'),
+(7, 'Intercomunicador', 'Dispositivo para comunicación de voz bidireccional en un área definida.'),
+(8, 'Control de acceso', 'Sistema que controla la entrada y salida en áreas restringidas.'),
+(9, 'Cerco eléctrico', 'Sistema de seguridad que utiliza cables electrificados para protección perimetral.'),
+(10, 'Botón de pánico', 'Dispositivo de emergencia que activa una alarma cuando se presiona.');
